@@ -17,7 +17,7 @@ const IndexPage = () => (
 
     <br/>
 
-    <div style={{ maxWidth: `600px` }}>
+    <div style={{ maxWidth: `600px`, textAlign: `justify` }}>
       <h2>About me</h2>
       <p>
         Hey there! My names Stefano, but you can call me Stef for short. I am
