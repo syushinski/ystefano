@@ -6,9 +6,18 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
-  <Layout index={true}>
+  <Layout>
     <SEO title="Home" />
-    <div style={{ maxWidth: `750px` }}>
+
+    <div style={{
+          width: `100%`,
+          }}>
+      <Image/>
+    </div>
+
+    <br/>
+
+    <div style={{ maxWidth: `600px` }}>
       <h2>About me</h2>
       <p>
         Hey there! My names Stefano, but you can call me Stef for short. I am
@@ -39,6 +48,8 @@ const IndexPage = () => (
         the Software Engineering course in the spring.
       </p>
     </div>
+
+    
   </Layout>
 )
 

@@ -14,7 +14,7 @@ import NavBar from "./nav"
 import "./layout.css"
 import Image from "./image"
 
-const Layout = ({ children, index }) => {
+const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -24,22 +24,6 @@ const Layout = ({ children, index }) => {
       }
     }
   `)
-  
-  let photoOfMe;
-
-  if (index) {
-    photoOfMe = <div style={{float: `left`}}>
-    <div style={{
-          maxWidth: `300px`,  
-          width: `100%`, 
-          visibility: index,
-          position: `fixed`}}>
-      <Image/>
-    </div>
-    </div>;
-  } else {
-    photoOfMe = null;
-  }
 
   return (
     <>
@@ -49,18 +33,16 @@ const Layout = ({ children, index }) => {
       
       <div
         style={{
-          margin: `0 auto`,
-          maxWidth: 800,
+          display: 'flex',
           width: `70%`,
           padding: `0px 1.0875rem 1.45rem`,
           paddingTop: 0,
-          float: `left`
+          justifyContent: `center`,
+          alignItems: `center`
         }}
       >
         <main>{children}</main>
       </div>
-      
-      {photoOfMe}
     </>
   )
 }

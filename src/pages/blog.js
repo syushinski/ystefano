@@ -5,10 +5,12 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const BlogPage = () => (
-    <Layout index={false}>
+    <Layout>
         <SEO title="Blog" />
-            <h1>Blog</h1>
-            <p>Here's where I'll list my blog.</p>
+            <div style={{maxWidth: 600, width: 600}}>
+                <h1>Blog</h1>
+                <p>Here's where I'll list my blog.</p>
+            </div>
     </Layout>
 )
 
