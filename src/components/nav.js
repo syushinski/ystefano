@@ -55,6 +55,10 @@ NavBar.defaultProps = {
       {
           title: "Photos",
           slug: "photos"
+      },
+      {
+          title: "Pitch me a bit",
+          slug: "pitchmeabit"
       }
     ]
   }
